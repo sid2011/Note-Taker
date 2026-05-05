@@ -6,9 +6,14 @@ function btnClick(){
     document.getElementById("text-box").value="";
     display()
 }; function display(){
-    let list=document.createElement("li")
-   for(let i=0;i<text.length;i++){
-    list.innerHTML=text[i]
-    document.querySelector("ul").appendChild(list)
-   }
-}
+    let ul = document.querySelector("ul");
+    ul.innerHTML = "";
+    for(let i=0;i<text.length;i++){
+        let list = document.createElement("li");
+        list.innerText = text[i];
+        ul.appendChild(list);
+    }
+};function delBtn(){
+    text.length=0
+    display()
+};
