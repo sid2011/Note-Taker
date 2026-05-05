@@ -1,5 +1,7 @@
-let text;
+let text = [];
+let value;
 function btnClick(){
-    let text=document.getElementById("text-box").value
-    console.log(text);
+    let data = document.getElementById("text-box").value;
+    text.push(data);
+    document.getElementById("text-box").value="";
 };
